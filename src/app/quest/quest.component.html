@@ -1,0 +1,30 @@
+<form>
+
+
+
+  <div *ngFor="let question of questions">
+
+    <h2>
+      {{question.q}}
+    </h2>
+    <br>
+    <div class="btn-group">
+      <label class="radio-inline" *ngFor="let answer of question.a">
+        <br>
+
+        <input type="radio" id="{{answer}}" name="{{question.q}}" required>answer
+
+      </label>
+    </div>
+
+
+  </div>
+
+  <button type="submit" class="btn btn-primary" routerLink="/success">
+    submit
+  </button>
+  <button type="reset" class="btn btn-primary" routerLink="/home">
+    cancel
+  </button>
+
+</form>
